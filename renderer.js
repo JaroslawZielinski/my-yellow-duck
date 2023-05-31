@@ -12,7 +12,9 @@ $(document).ready(function() {
     const clipboard = new ClipboardJS('#' + submitButton, {
         target: function () {
             if (confirm('Are you sure Yellow Duck hasn\'t solved your problem yet?')) {
-                return document.getElementById(textArea);
+                if (confirm('Please confirm. Are you really sure?')) {
+                    return document.getElementById(textArea);
+                }
             }
             return null;
         }
