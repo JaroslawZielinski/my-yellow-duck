@@ -1,0 +1,13 @@
+{
+    "name": "jaroslawzielinski/my-yellow-duck",
+    "description": "My Yellow Duck Project",
+    "type": "project",
+    "license": "CC0-1.0",
+    "authors": [
+        {
+            "name": "Jarosław Zieliński",
+            "email": "jarek.zielinski82@gmail.com"
+        }
+    ],
+    "require": {}
+}

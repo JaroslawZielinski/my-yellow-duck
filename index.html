@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./yellow-duck-1-16.png" />
+    <!-- Attached file CSS Bootstrapa -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Attached file JavaScript Bootstrap -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Attached file JavaScript jQuery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Attached file Clipboard -->
+    <script src="node_modules/clipboard/dist/clipboard.min.js"></script>
+    <title>I am your Yellow Duck! How can I help you?</title>
+  </head>
+  <body>
+    <div class="container" style="width:100%;">
+      <div class="row">
+        <div class="col-12 col-sm-12">
+          <img src="./yellow-duck.png" alt="Yello Duck" title="I am your Yellow Duck! How can I help you?" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-sm-12">
+          <label for="yellow_duck_content">Write your question here:</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-sm-12">
+          <textarea style="width:100%;" id="yellow_duck_content" rows="10" placeholder="What's on your mind?"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-sm-12">
+          <button class="btn btn-primary" id="yellow_duck_button">Copy To Clipboard</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>
