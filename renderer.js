@@ -11,7 +11,10 @@ $(document).ready(function() {
     $('#' + textArea).focus();
     const clipboard = new ClipboardJS('#' + submitButton, {
         target: function () {
-            return document.getElementById(textArea);
+            if (confirm('Are you sure Your Yellow Duck did not answer your question?')) {
+                return document.getElementById(textArea);
+            }
+            return null;
         }
     });
     clipboard.on('success', function(e) {
