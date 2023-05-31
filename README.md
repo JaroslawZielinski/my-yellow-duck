@@ -34,8 +34,23 @@ npm start
 ````
 That's it! Your Yellow Duck is ready to assist you in your coding adventures. Happy rubber duck debugging!
 
+## It may help for Ubuntu users:
+
+* You may add this application to system toolbar in Ubuntu (using _alacarte_ f.e) with duck icon ![Yellow Duck](yellow-duck.png).
+
+* If you would like to open window only once ignoring multiple clicking,
+you may create running script like this:
+```shell
+#!/bin/bash
+
+if pgrep "electron" >/dev/null; then
+    echo ""
+else
+    cd ~/my-yellow-duck && npm install && npm start
+fi
+```
+
 ## See Also
 To learn more about the concept of rubber duck debugging, check out the following link:
-
 
 [Rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)
