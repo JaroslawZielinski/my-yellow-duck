@@ -34,7 +34,7 @@ npm start
 ````
 That's it! Your Yellow Duck is ready to assist you in your coding adventures. Happy rubber duck debugging!
 
-## It may help for Ubuntu users:
+## It may be useful for Ubuntu users:
 
 * You may add this application to system toolbar in Ubuntu (using _alacarte_ f.e) with duck icon ![Yellow Duck](yellow-duck.png).
 
