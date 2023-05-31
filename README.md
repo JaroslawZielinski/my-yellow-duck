@@ -1,23 +1,41 @@
-# my-yellow-duck
+# My Yellow Duck
 
-My Yellow Duck project. You can type anything you would like to ask someone on
-slack/rocketchat etc.
-When you are sure you want to copy your message... Duck will ask you are you sure?
-When you are sure, press **Copy To Clipboard** 
+Welcome to My Yellow Duck project! 🦆🌼
 
-...but... Yellow duck effect may happen before this. No one knows...
+Have you ever found yourself in need of someone to talk to about a problem or bug you're facing while coding? Introducing My Yellow Duck, your trusty companion for rubber duck debugging sessions!
 
-![](docs/yellowduck.png)
+Simply type anything you'd like to ask or discuss, just like you would on Slack, Rocket.Chat, or any other messaging platform. When you're ready to copy your message and share it with someone, the Duck will ask you, "Are you sure?" It's your chance to validate your thoughts and make sure you're ready to take the next step.
 
-You can attach a shortcut in Ubuntu to your system toolbar.
+But beware! The mysterious "Yellow Duck Effect" may take hold before you even copy your message. Who knows what insights and solutions might come to you while interacting with your duck companion? Embrace the unexpected!
 
-# How to install
+![Yellow Duck](docs/yellowduck.png)
+
+And guess what? You can even attach a shortcut to My Yellow Duck on your system toolbar for quick access! 🚀
+
+## How to Install
+
+To get started with My Yellow Duck, follow these simple steps:
+
+1. Clone the repository:
 ```shell
 git clone https://github.com/JaroslawZielinski/my-yellow-duck.git
-cd my-yellow-duck
-npm install
-npm start
 ```
+2. Navigate to the project directory:
+```shell
+cd my-yellow-duck
+````
+3. Install the dependencies:
+```shell
+npm install
+````
+4. Launch My Yellow Duck:
+```shell
+npm start
+````
+That's it! Your Yellow Duck is ready to assist you in your coding adventures. Happy rubber duck debugging!
 
-## See
+## See Also
+To learn more about the concept of rubber duck debugging, check out the following link:
+
+
 [Rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)
