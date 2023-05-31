@@ -8,7 +8,7 @@
 $(document).ready(function() {
     let clipBoard = '';
     const textArea = 'yellow_duck_content', submitButton = 'yellow_duck_button';
-    $(textArea).focus();
+    $('#' + textArea).focus();
     const clipboard = new ClipboardJS('#' + submitButton, {
         target: function () {
             return document.getElementById(textArea);
