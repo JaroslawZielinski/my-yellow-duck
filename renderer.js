@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('#' + textArea).focus();
     const clipboard = new ClipboardJS('#' + submitButton, {
         target: function () {
-            if (confirm('Are you sure Your Yellow Duck did not answer your question?')) {
+            if (confirm('Are you sure Yellow Duck hasn\'t solved your problem yet?')) {
                 return document.getElementById(textArea);
             }
             return null;
