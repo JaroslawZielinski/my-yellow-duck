@@ -1,6 +1,6 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow, Menu } = require('electron')
-const path = require('path')
+const { app, BrowserWindow, Menu } = require('electron');
+const path = require('path');
 
 function createWindow(overlay, description) {
   // Create the browser window.
@@ -9,8 +9,9 @@ function createWindow(overlay, description) {
     height: 360,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
-    }
-  })
+    },
+    alwaysOnTop: true
+  });
 
   // Production or test mode?
   let testFlag = false;
@@ -27,11 +28,11 @@ function createWindow(overlay, description) {
   mainWindow.setIcon(iconPath);
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('index.html');
 
   // Open the DevTools.
   if (testFlag) {
-    mainWindow.webContents.openDevTools()
+    mainWindow.webContents.openDevTools();
   }
 }
 
@@ -39,12 +40,14 @@ function createWindow(overlay, description) {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  createWindow()
+  createWindow();
 
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (BrowserWindow.getAllWindows().length === 0) createWindow()
+    if (BrowserWindow.getAllWindows().length === 0) {
+      createWindow();
+    }
   })
 })
 
@@ -52,7 +55,9 @@ app.whenReady().then(() => {
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') app.quit()
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
 })
 
 // In this file you can include the rest of your app's specific main process
