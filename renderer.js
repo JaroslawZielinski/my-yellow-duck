@@ -33,9 +33,6 @@ $(document).ready(function() {
         } else if ((event.ctrlKey && event.which === 67) || (event.ctrlKey && event.which === 45)) { // Copy event
             console.log('Copy event detected (Ctrl-C or Ctrl-Insert). Execution blocked.');
             event.preventDefault();
-        } else if ((event.ctrlKey && event.which === 86) || (event.shiftKey && event.which === 45)) { // Paste event
-            console.log('Paste event detected (Ctrl-V or Shift-Insert). Execution blocked.');
-            event.preventDefault();
         } else if ((event.ctrlKey && event.which === 88) || (event.shiftKey && event.which === 46)) { // Cut event
             console.log('Cut event detected (Ctrl-X or Shift-Delete). Execution blocked.');
             event.preventDefault();
