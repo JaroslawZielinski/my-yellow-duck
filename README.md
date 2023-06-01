@@ -24,11 +24,15 @@ git clone https://github.com/JaroslawZielinski/my-yellow-duck.git
 ```shell
 cd my-yellow-duck
 ````
-3. Install the dependencies:
+3. Copy .env.dist to .env (you may edit .env configuration file):
+```shell
+cp .env.dist .env
+````
+4. Install the dependencies:
 ```shell
 npm install
 ````
-4. Launch My Yellow Duck:
+5. Launch My Yellow Duck:
 ```shell
 npm start
 ````

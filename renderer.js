@@ -26,10 +26,23 @@ $(document).ready(function() {
     clipboard.on('error', function(e) {
         alert('Copying to clipboard was not successful.');
     });
-    $('#' + textArea).keydown(function(event) {
+    $('#' + textArea).on('keydown', function(event) {
+        if (event.ctrlKey && event.which === 65) { // Ctrl-A
+            console.log('Ctrl-A event detected. Execution blocked.');
+            event.preventDefault();
+        } else if ((event.ctrlKey && event.which === 67) || (event.ctrlKey && event.which === 45)) { // Copy event
+            console.log('Copy event detected (Ctrl-C or Ctrl-Insert). Execution blocked.');
+            event.preventDefault();
+        } else if ((event.ctrlKey && event.which === 86) || (event.shiftKey && event.which === 45)) { // Paste event
+            console.log('Paste event detected (Ctrl-V or Shift-Insert). Execution blocked.');
+            event.preventDefault();
+        } else if ((event.ctrlKey && event.which === 88) || (event.shiftKey && event.which === 46)) { // Cut event
+            console.log('Cut event detected (Ctrl-X or Shift-Delete). Execution blocked.');
+            event.preventDefault();
+        }
         showStatus();
     });
-    $('#' + textArea).keyup(function(event) {
+    $('#' + textArea).on('keyup', function(event) {
         showStatus();
     });
     $('#' + textArea).on('change', function(event) {

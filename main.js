@@ -1,12 +1,17 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config({
+  path: '.env',
+  override: false
+});
 
 function createWindow(overlay, description) {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 900,
-    height: 360,
+    width: parseInt(process.env.WINDOW_WIDTH !== undefined ? process.env.WINDOW_WIDTH : 900),
+    height: parseInt(process.env.WINDOW_HEIGHT !== undefined ? process.env.WINDOW_HEIGHT : 360),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     },
@@ -14,7 +19,7 @@ function createWindow(overlay, description) {
   });
 
   // Production or test mode?
-  let testFlag = false;
+  let testFlag = (/true/i).test(process.env.TEST_FLAG !== undefined ? process.env.TEST_FLAG : 'false');
 
   // Set null menu to app
   if (!testFlag) {
