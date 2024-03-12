@@ -18,6 +18,8 @@ And guess what? You can even attach a shortcut to My Yellow Duck on your system 
 
 To get started with My Yellow Duck, follow these simple steps:
 
+in [packagist](https://packagist.org/packages/jaroslawzielinski/my-yellow-duck)
+
 1. Clone the repository:
 ```shell
 git clone https://github.com/JaroslawZielinski/my-yellow-duck.git
