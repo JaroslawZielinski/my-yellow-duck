@@ -2,6 +2,8 @@
 
 Welcome to My Yellow Duck project! 🦆🌼
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/jaroslawzielinski)
+
 Have you ever found yourself in need of someone to talk to about a problem or bug you're facing while coding? Introducing My Yellow Duck, your trusty companion for rubber duck debugging sessions!
 
 Simply type anything you'd like to ask or discuss, just like you would on Slack, Rocket.Chat, or any other messaging platform. When you're ready to copy your message and share it with someone, the Duck will ask you, "Are you sure?" It's your chance to validate your thoughts and make sure you're ready to take the next step.
